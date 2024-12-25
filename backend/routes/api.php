@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\API\ApiAuthController;
+use App\Http\Controllers\TaskController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -24,3 +25,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::post('/login', [ApiAuthController::class, 'login']);
 Route::post('/logout', [ApiAuthController::class, 'logout'])->middleware('auth:sanctum');
 Route::get('/user', [ApiAuthController::class, 'user'])->middleware('auth:sanctum');
+
+Route::get('/userlist', [ApiAuthController::class, 'userlist']);
+Route::post('/task-create', [TaskController::class, 'taskCreate']);
+
+Route::get('/task-show', [TaskController::class, 'taskShow']);

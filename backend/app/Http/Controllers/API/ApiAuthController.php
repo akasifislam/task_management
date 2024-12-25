@@ -39,4 +39,9 @@ class ApiAuthController extends Controller
     {
         return response()->json($request->user());
     }
+    public function userlist()
+    {
+        $users = User::with('task')->where('id', '!=', 1)->get();
+        return response()->json($users);
+    }
 }
