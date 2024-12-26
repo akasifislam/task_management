@@ -37,10 +37,14 @@ http://localhost:5173/login
 
 ![sc4](https://github.com/user-attachments/assets/d2cc2231-3be2-454a-b7b0-e3cfd335cdfd)
 
+## User Register
+
+![sc5](https://github.com/user-attachments/assets/1ed55f13-b4f0-4d21-b214-1dc2fd6b4f30)
+
 ## Admin Task Assign
 
 ![sc1](https://github.com/user-attachments/assets/d0534cb1-ffce-4d58-9738-0f312310539f)
 
-## User Task Pending Processing Complete
+## User Task Pending, Processing, Complete
 
 ![sc2](https://github.com/user-attachments/assets/8a738e89-8c44-4f5b-a784-02bad6e86256)
