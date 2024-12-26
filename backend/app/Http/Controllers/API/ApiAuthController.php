@@ -28,6 +28,22 @@ class ApiAuthController extends Controller
         return response()->json(['token' => $token, 'user' => $user]);
     }
 
+    public function register(Request $request)
+    {
+        $data = $request->validate([
+            'name' => 'required|string',
+            'email' => 'required|email|unique:users',
+            'password' => 'required|string|confirmed',
+        ]);
+
+        $data['password'] = bcrypt($request->password);
+
+        $user = User::create($data);
+        $token = $user->createToken('API Token')->plainTextToken;
+
+        return response()->json(['token' => $token, 'user' => $user]);
+    }
+
     public function logout(Request $request)
     {
         $request->user()->currentAccessToken()->delete();
