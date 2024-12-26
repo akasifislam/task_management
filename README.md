@@ -39,7 +39,7 @@ http://localhost:5173/login
 
 ## Admin Task Assign
 
-![sc1](https://github.com/user-attachments/assets/62581662-7b50-4aee-b47d-f34e5abd418a)
+![sc1](https://github.com/user-attachments/assets/8d190255-bfc2-4d63-8625-3115abaaa752)
 
 ## User Task Pending Processing Complete
 
