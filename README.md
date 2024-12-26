@@ -28,3 +28,19 @@ http://localhost:5173/login
 # Email: user@mail.com
 # Password: secret007
 ```
+
+## Admin Login
+
+![sc3](https://github.com/user-attachments/assets/1c384a80-856b-4e20-aedb-f2d6656f2a04)
+
+## User Login
+
+![sc4](https://github.com/user-attachments/assets/d2cc2231-3be2-454a-b7b0-e3cfd335cdfd)
+
+## Admin Task Assign
+
+![sc1](https://github.com/user-attachments/assets/62581662-7b50-4aee-b47d-f34e5abd418a)
+
+## User Task Pending Processing Complete
+
+![sc2](https://github.com/user-attachments/assets/8a738e89-8c44-4f5b-a784-02bad6e86256)
