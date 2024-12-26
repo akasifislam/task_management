@@ -5,16 +5,8 @@ use App\Http\Controllers\TaskController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| API Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register API routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "api" middleware group. Make something great!
-|
-*/
+
+
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
@@ -22,11 +14,17 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 
 
+// Authentication Routes
 Route::post('/login', [ApiAuthController::class, 'login']);
 Route::post('/logout', [ApiAuthController::class, 'logout'])->middleware('auth:sanctum');
 Route::get('/user', [ApiAuthController::class, 'user'])->middleware('auth:sanctum');
 
 Route::get('/userlist', [ApiAuthController::class, 'userlist']);
-Route::post('/task-create', [TaskController::class, 'taskCreate']);
 
-Route::get('/task-show', [TaskController::class, 'taskShow']);
+// Task Routes
+// Route::middleware('auth:sanctum')->group(function () {
+Route::post('/task-create', [TaskController::class, 'taskCreate']);
+Route::get('/task-show/{userid}', [TaskController::class, 'taskShow']);
+Route::put('/task-update/{id}', [TaskController::class, 'update'])->name('task.update');
+Route::delete('/task-delete/{id}', [TaskController::class, 'delete'])->name('task.delete');
+// });
